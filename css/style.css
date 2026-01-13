@@ -968,6 +968,36 @@ body {
     font-size: 0.85rem;
 }
 
+.footer-credit {
+    font-size: 0.8rem;
+}
+
+.footer-credit a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    position: relative;
+}
+
+.footer-credit a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--gold);
+    transition: width 0.3s ease;
+}
+
+.footer-credit a:hover {
+    color: var(--gold);
+}
+
+.footer-credit a:hover::after {
+    width: 100%;
+}
+
 /* =====================================================
    PAGE HEADER
    ===================================================== */
