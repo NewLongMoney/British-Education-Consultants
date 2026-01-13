@@ -5,10 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>British Education Consultants | Teacher Training & School Advisory</title>
     <meta name="description" content="We help schools adopt British National Curriculum through teacher training, leadership development, and expert advisory services.">
-    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAABE0lEQVR4nO2WMQ6CQBBF/4YLaOwt9AZewMbK2lhrYuEZPIAn8Cq2GiutPYKNYiGhIRTuAhZAMCGRXdjEgokzySRk5s3+2Z0FLBaL5V8RAHgCuABokXsn9CZU3IBiJQD0ANwBHMi5EzoVKgmQX4DbGUC6vBdPBGxCNQb5EWzLu8BEgEoDFKwgFRBKLtWcggw0BfKEckRa3d4J3YZqAsRvXZdNIJ8D2JVp3odeJ1R7BkhoBBKBAKqFSgOIaQJpQMIEUoHEE0qfhP8r4PoB0Cen3gn1h4CcBiSaBOqFagN4Dkh0AuWESgeIJYEGIJFQjUAdwOsE6oDEJ6HhCfhvAT1AzIRqDuA1gRqBWKjkCRSbQBaL5Y95AtI4dIUGr7Q0AAAAAElFTkSuQmCC">
+    <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEsklEQVR4nO3dz2sTQRjG8Td1a/UgeFM8eBEEQfDmyT/Av0DwIHjx4kkQBO96ELx4EgT/AEEQwYsHQTx4Mj3pyZNg8LRIB0EDVu3PzOxMdpJN0qR5HhhSyG52355MJjsz2QMAAAAAAAAAAAAAAAAAAAAAAMBWluT+w5nZtZJOSnpU0qOSHitpvEt7JX3V9v8f0ldJRyQdkvSwpIfHjrk/TjlRKOmUpIMlPVfSw5Iel3Ss7ZijGidKJR2WdKSkx0p6TNLjko63HTNtHJZ0RNLDzx2T9Phz4zDPNWNOlHR40rGSHnZuHJa0X9KhtuOqfh6XdLjtuGONI0fHXR6HJe2TdCjt2ON4MiZ9cdzRcc+No/pxNI6KY0fHYUl7JR1oO67q59hxkhyXdHjSsZIednYclrRH0v40jqp/HJN0tO246cZx0qclHZB0aNKxkh53dhyWtFvS/jSOqn+MSToyzXGPNk4UdKikByYda3fcpyXtlXQg7bir/mF7Ttdx0xyXdHjSsZIemrMdO6rKi2/vjqPz4sC0YyU9xI3DkvZI2p/GUfWP2nM23jhqj4vOcdK5kh6cdKykh+dtx46q8mNnxz0f545x0vknHSvpQecqjsOS9kja33Zc1T/Gj5vm2MedHPfcOEr6fpLWMO+p+kfVOKrGUXHsqDjxbkkPTjpW0kPztuMnVfnR+XHm+bhynHSepAcmHSvpAfM0jkNV+dH5ccv5uHKcdK6kByYdK+kBCzSOw1X50fmx6/n4cxy7b9yE4yQ9MNux+yTtn3Ss7djD3DgOV+VH58c9x+Pi2NFxtscNdqykh8zTOI5U5Ufnxy3n48txxxpnpGOPO0fSQ5OOrTpumuNu48aRqvzo/NjVcdc4dtwktY6bpNYx77iPSXpw0rGSHjJv46g4R9vjtY47Og57zmMlPTjpWEkPmadxHKvKj86Pnc4314+TzjXJcZIenHSspIfM2ziOVuVH58ed6+P2cewox6Y5dtKx+yQ9NOlYSQ+bp3Ecr8qPzo+7no+vHHeso9Mce9I5kh6YdKykh8zbOE5U5Ufnx53r483jONeY5LhJD0w6VtJD5m0cp6ryo/Pjnuvjy3Gc0xx70jmSHph0rKSHzNs4TlflR+fHPdfHbcdxrqOznJvmuEkPTDpW0kPmbRxnqvKj8+PO9XH7OG6aY086R9IDk46V9JB5G8fZqvzo/LjnuuPKcZxrOtskx0l6YNKxkh4yb+M4V5UfnR93Xnc8OU465z2SHph0rKSHzNs4zlflR+fHe667nRxn0h0bN+mBScdKesi8jeNCVX50fjx43fHkOJN2bNwkBycde9yxBz7u/7I4zlXlx+rHOa87nhx30o5N+rekB2Y5tqiHPvD/8rg4zlflx/PHPdcdj45zfofGTXpglmOrhz7w/3MccqIqP54/7rnuaB3nWkdN2rGTPi7pgVmOrR76wP9z/FEPP1GVH88f91x3tI5zHXfijq3r47kkPTDLscFDD/w/19/N8IdV+fH8cc91R+s417dMf+yk93u0L6eo+5zKPc/D6kF1fjx/3HPd0TpOuqZ6TQvJPafqRKiun7tR0hVV2RxrXlQH6gEAAAAAAAAAAAAAAAAAAAAAAADAqvgbTqIUgwC0KAAAAAAASUVORK5CYII=">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0a1628">
+    
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://british-education-consultants.vercel.app/">
+    <meta property="og:title" content="British Education Consultants | Teacher Training & School Advisory">
+    <meta property="og:description" content="We help schools adopt British National Curriculum through teacher training, leadership development, and expert advisory services.">
+    <meta property="og:image" content="https://british-education-consultants.vercel.app/og-image.png">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="British Education Consultants">
+    <meta name="twitter:description" content="Teacher training, leadership development & school advisory for British curriculum">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Header -->

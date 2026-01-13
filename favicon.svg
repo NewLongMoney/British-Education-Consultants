@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" fill="#0a1628"/>
+  <rect x="26" y="0" width="6" height="32" fill="#c41230"/>
+  <text x="5" y="23" font-family="Georgia, serif" font-size="18" font-weight="400" fill="#ffffff">BEC</text>
+</svg>

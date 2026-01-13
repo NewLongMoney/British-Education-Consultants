@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0a1628"/>
+  
+  <!-- Red accent stripe -->
+  <rect x="1140" y="0" width="60" height="630" fill="#c41230"/>
+  
+  <!-- Diagonal pattern (subtle) -->
+  <defs>
+    <pattern id="diag" width="40" height="40" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="40" stroke="#ffffff" stroke-width="1" opacity="0.03"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#diag)"/>
+  
+  <!-- Logo mark -->
+  <rect x="80" y="180" width="80" height="80" fill="#0a1628" stroke="#ffffff" stroke-width="2"/>
+  <rect x="145" y="180" width="15" height="80" fill="#c41230"/>
+  <text x="90" y="240" font-family="Georgia, serif" font-size="40" fill="#ffffff">BEC</text>
+  
+  <!-- Title -->
+  <text x="80" y="340" font-family="Georgia, serif" font-size="56" fill="#ffffff">British Education</text>
+  <text x="80" y="410" font-family="Georgia, serif" font-size="56" fill="#ffffff">Consultants</text>
+  
+  <!-- Tagline -->
+  <text x="80" y="480" font-family="Arial, sans-serif" font-size="24" fill="#94a3b8">Teacher Training • Leadership Development • School Advisory</text>
+  
+  <!-- URL -->
+  <text x="80" y="560" font-family="Arial, sans-serif" font-size="18" fill="#64748b">british-education-consultants.vercel.app</text>
+</svg>
