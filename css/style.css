@@ -1127,6 +1127,18 @@ body {
     color: var(--navy);
 }
 
+.contact-details li a {
+    color: var(--navy);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    position: relative;
+}
+
+.contact-details li a:hover {
+    color: var(--red);
+    text-decoration: underline;
+}
+
 /* =====================================================
    ANIMATIONS
    ===================================================== */
