@@ -55,6 +55,27 @@ body {
     color: var(--white);
 }
 
+/* Skip to content - Accessibility */
+.skip-to-content {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    z-index: 10000;
+    padding: var(--space-sm) var(--space-md);
+    background: var(--navy);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 0 0 4px 0;
+    transition: top 0.2s ease;
+}
+
+.skip-to-content:focus {
+    top: 0;
+    outline: 3px solid var(--gold);
+    outline-offset: 2px;
+}
+
 /* Container */
 .container {
     max-width: 1200px;
