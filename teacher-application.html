@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Application | British Education Consultants</title>
+    <meta name="description" content="Apply to join our team of expert educators and consultants specializing in the British National Curriculum.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAABE0lEQVR4nO2WMQ6CQBBF/4YLaOwt9AZewMbK2lhrYuEZPIAn8Cq2GiutPYKNYiGhIRTuAhZAMCGRXdjEgokzySRk5s3+2Z0FLBaL5V8RAHgCuABokXsn9CZU3IBiJQD0ANwBHMi5EzoVKgmQX4DbGUC6vBdPBGxCNQb5EWzLu8BEgEoDFKwgFRBKLtWcggw0BfKEckRa3d4J3YZqAsRvXZdNIJ8D2JVp3odeJ1R7BkhoBBKBAKqFSgOIaQJpQMIEUoHEE0qfhP8r4PoB0Cen3gn1h4CcBiSaBOqFagN4Dkh0AuWESgeIJYEGIJFQjUAdwOsE6oDEJ6HhCfhvAT1AzIRqDuA1gRqBWKjkCRSbQBaL5Y95AtI4dIUGr7Q0AAAAAElFTkSuQmCC">
+    <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEsklEQVR4nO3dz2sTQRjG8Td1a/UgeFM8eBEEQfDmyT/Av0DwIHjx4kkQBO96ELx4EgT/AEEQwYsHQTx4Mj3pyZNg8LRIB0EDVu3PzOxMdpJN0qR5HhhSyG52355MJjsz2QMAAAAAAAAAAAAAAAAAAAAAAMBWluT+w5nZtZJOSnpU0qOSHitpvEt7JX3V9v8f0ldJRyQdkvSwpIfHjrk/TjlRKOmUpIMlPVfSw5Iel3Ss7ZijGidKJR2WdKSkx0p6TNLjko63HTNtHJZ0RNLDzx2T9Phz4zDPNWNOlHR40rGSHnZuHJa0X9KhtuOqfh6XdLjtuGONI0fHXR6HJe2TdCjt2ON4MiZ9cdzRcc+No/pxNI6KY0fHYUl7JR1oO67q59hxkhyXdHjSsZIednYclrRH0v40jqp/HJN0tO246cZx0qclHZB0aNKxkh53dhyWtFvS/jSOqn+MSToyzXGPNk4UdKikByYda3fcpyXtlXQg7bir/mF7Ttdx0xyXdHjSsZIemrMdO6rKi2/vjqPz4sC0YyU9xI3DkvZI2p/GUfWP2nM23jhqj4vOcdK5kh6cdKykh+dtx46q8mNnxz0f545x0vknHSvpQecqjsOS9kja33Zc1T/Gj5vm2MedHPfcOEr6fpLWMO+p+kfVOKrGUXHsqDjxbkkPTjpW0kPztuMnVfnR+XHm+bhynHSepAcmHSvpAfM0jkNV+dH5ccv5uHKcdK6kByYdK+kBCzSOw1X50fmx6/n4cxy7b9yE4yQ9MNux+yTtn3Ss7djD3DgOV+VH58c9x+Pi2NFxtscNdqykh8zTOI5U5Ufnxy3n48txxxpnpGOPO0fSQ5OOrTpumuNu48aRqvzo/NjVcdc4dtwktY6bpNYx77iPSXpw0rGSHjJv46g4R9vjtY47Og57zmMlPTjpWEkPmadxHKvKj86Pnc4314+TzjXJcZIenHSspIfM2ziOVuVH58ed6+P2cewox6Y5dtKx+yQ9NOlYSQ+bp3Ecr8qPzo+7no+vHHeso9Mce9I5kh6YdKykh8zbOE5U5Ufnx53r483jONeY5LhJD0w6VtJD5m0cp6ryo/Pjnuvjy3Gc0xx70jmSHph0rKSHzNs4TlflR+fHPdfHbcdxrqOznJvmuEkPTDpW0kPmbRxnqvKj8+PO9XH7OG6aY086R9IDk46V9JB5G8fZqvzo/LjnuuPKcZxrOtskx0l6YNKxkh4yb+M4V5UfnR93Xnc8OU465z2SHph0rKSHzNs4zlflR+fHe667nRxn0h0bN+mBScdKesi8jeNCVX50fjx43fHkOJN2bNwkBycde9yxBz7u/7I4zlXlx+rHOa87nhx30o5N+rekB2Y5tqiHPvD/8rg4zlflx/PHPdcdj45zfofGTXpglmOrh z7w/3MccqIqP54/7rnuaB3nWkdN2rGTPi7pgVmOrR76wP9z/FEPP1GVH88f91x3tI5zHXfijq3r47kkPTDLscFDD/w/19/N8IdV+fH8cc91R+s417dMf+yk93u0L6eo+5zKPc/D6kF1fjx/3HPd0TpOuqZ6TQvJPafqRKiun7tR0hVV2RxrXlQH6gEAAAAAAAAAAAAAAAAAAAAAAADAqvgbTqIUgwC0KAAAAAAASUVORK5CYII=">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#1e40af">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Teacher Application | British Education Consultants">
+    <meta property="og:description" content="Apply to join our team of expert educators and consultants specializing in the British National Curriculum.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Skip to content -->
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-mark">BEC</span>
+                <span class="logo-text">British Education Consultants</span>
+            </a>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+            <button class="mobile-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section id="main-content" class="page-header" style="background: var(--navy); color: var(--white); padding: var(--space-xl) 0;">
+        <div class="container">
+            <div class="page-header-content">
+                <p class="section-label" style="color: var(-- gold);">Join Our Team</p>
+                <h1 style="color: var(--white);">Teacher Application</h1>
+                <p style="color: rgba(255,255,255,0.8);">We are always looking for passionate educators and consultants with experience in the British National Curriculum.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form -->
+    <section class="section section-cream">
+        <div class="container" style="max-width: 900px;">
+            <div style="background: var(--white); border-radius: 24px; box-shadow: 0 20px 50px rgba(10, 22, 40, 0.08); overflow: hidden;">
+                <!-- Form Header -->
+                <div style="background: var(--navy); padding: var(--space-lg); text-align: center; border-bottom: 4px solid var(--red);">
+                    <div style="margin-bottom: var(--space-sm);">
+                        <img src="images/Logo/Main%20Logo.jpeg" alt="BEC Logo" style="height: 60px; width: auto;">
+                    </div>
+                    <h2 style="color: var(--white); font-family: var(--font-serif); font-size: 2rem; margin: 0;">Apply to BEC</h2>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-top: 4px;">Join our network of elite British curriculum educators</p>
+                </div>
+
+                <div style="padding: var(--space-xl);">
+                    <form id="teacherApplicationForm">
+                        <h3 style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--navy); margin-bottom: var(--space-lg); border-bottom: 1px solid var(--cream-dark); padding-bottom: 12px;">Personal Information</h3>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-md); margin-bottom: var(--space-xl);">
+                            <div class="form-group">
+                                <label for="name">Full Name*</label>
+                                <input type="text" id="name" name="name" placeholder="Name as per ID/Passport" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address*</label>
+                                <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number*</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+254 ..." required>
+                            </div>
+                            <div class="form-group">
+                                <label for="country">Location / Residence*</label>
+                                <input type="text" id="country" name="country" placeholder="e.g. Nairobi, Kenya" required>
+                            </div>
+                        </div>
+
+                        <h3 style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--navy); margin-bottom: var(--space-lg); border-bottom: 1px solid var(--cream-dark); padding-bottom: 12px;">Professional Details</h3>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-md); margin-bottom: var(--space-xl);">
+                            <div class="form-group">
+                                <label>Are you a Trained Teacher?*</label>
+                                <select name="trained_teacher" required style="width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 4px; font-family: var(--font-sans);">
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Experience in British Curriculum?*</label>
+                                <select name="bnc_experience" required style="width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 4px; font-family: var(--font-sans);">
+                                    <option value="Yes">Yes, extensive</option>
+                                    <option value="Partial">Some familiarity</option>
+                                    <option value="No">No experience</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group" style="margin-bottom: var(--space-lg);">
+                            <label for="experience">Experience Summary (Years/Subjects)*</label>
+                            <textarea id="experience" name="experience" placeholder="e.g. 8 years teaching IGCSE Physics and KS3 Science..." required style="height: 100px;"></textarea>
+                        </div>
+
+                        <div class="form-group" style="margin-bottom: var(--space-xl);">
+                            <label for="motivation">Statement of Interest*</label>
+                            <textarea id="motivation" name="motivation" placeholder="Tell us why you want to work with British Education Consultants..." required style="height: 120px;"></textarea>
+                        </div>
+
+                        <div class="form-group" style="margin-bottom: var(--space-xl);">
+                            <label for="cv" style="display: flex; align-items: center; gap: 8px;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                                Upload CV (PDF Preferred)
+                            </label>
+                            <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" class="file-input" style="padding: 20px; border: 2px dashed var(--cream-dark); width: 100%; text-align: center;">
+                        </div>
+
+                        <!-- Payment Alert Box (Styled like reference) -->
+                        <div style="background: #fffbeb; border: 1px solid #fde68a; border-left: 6px solid var(--red); padding: var(--space-lg); border-radius: 8px; margin-bottom: var(--space-xl);">
+                            <h4 style="color: #92400e; font-family: var(--font-serif); font-size: 1.125rem; margin-bottom: 8px; font-weight: 600;">Application Processing Fee</h4>
+                            <p style="font-size: 0.95rem; color: #92400e; line-height: 1.6; margin-bottom: 16px;">A mandatory fee of <strong>KES 2,500</strong> covers your profile review and initial eligibility assessment. Verification is required before any interview is scheduled.</p>
+                            
+                            <div style="background: rgba(255, 255, 255, 0.6); padding: 16px; border-radius: 6px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                                <div>
+                                    <span style="display: block; font-size: 10px; text-transform: uppercase; color: #b45309; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 4px;">Lipa na M-Pesa</span>
+                                    <p style="margin: 0; font-size: 0.95rem; color: #451a03;"><strong>Paybill:</strong> 625625</p>
+                                    <p style="margin: 0; font-size: 0.95rem; color: #451a03;"><strong>Acc:</strong> 7718481050</p>
+                                </div>
+                                <div>
+                                    <span style="display: block; font-size: 10px; text-transform: uppercase; color: #b45309; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 4px;">Bank Channel</span>
+                                    <p style="margin: 0; font-size: 0.95rem; color: #451a03;"><strong>National Bank</strong></p>
+                                    <p style="margin: 0; font-size: 0.95rem; color: #451a03;">7718481050</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; height: 60px; font-size: 1.1rem; border-radius: 12px;">Submit Application</button>
+                        <p id="submissionStatus" style="margin-top: 1.5rem; text-align: center; font-weight: 600; display: none;"></p>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Supporting Info -->
+            <div style="margin-top: var(--space-2xl); display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-xl);">
+                <div style="text-align: center; padding: var(--space-lg);">
+                    <div style="width: 50px; height: 50px; background: var(--navy); color: var(--white); display: flex; align-items: center; justify-content: center; border-radius: 50%; margin: 0 auto 16px;">1</div>
+                    <h5 style="font-family: var(--font-serif); font-size: 1.25rem; margin-bottom: 8px;">Review</h5>
+                    <p style="font-size: 0.9rem; color: var(--text-light);">Our board reviews your qualifications and curriculum experience.</p>
+                </div>
+                <div style="text-align: center; padding: var(--space-lg);">
+                    <div style="width: 50px; height: 50px; background: var(--navy); color: var(--white); display: flex; align-items: center; justify-content: center; border-radius: 50%; margin: 0 auto 16px;">2</div>
+                    <h5 style="font-family: var(--font-serif); font-size: 1.25rem; margin-bottom: 8px;">Interview</h5>
+                    <p style="font-size: 0.9rem; color: var(--text-light);">Qualifying candidates are invited for a professional competency interview.</p>
+                </div>
+                <div style="text-align: center; padding: var(--space-lg);">
+                    <div style="width: 50px; height: 50px; background: var(--navy); color: var(--white); display: flex; align-items: center; justify-content: center; border-radius: 50%; margin: 0 auto 16px;">3</div>
+                    <h5 style="font-family: var(--font-serif); font-size: 1.25rem; margin-bottom: 8px;">Onboarding</h5>
+                    <p style="font-size: 0.9rem; color: var(--text-light);">Successful educators join our consultant database for placements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="logo-mark">BEC</span>
+                    <p>British Education Consultants helps schools deliver internationally recognised British education.</p>
+                </div>
+                <div class="footer-links">
+                    <h5>Pages</h5>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="teacher-application.html" style="color: var(--footer-accent);">Teacher Application</a>
+                </div>
+                <div class="footer-links">
+                    <h5>Services</h5>
+                    <a href="services.html">Teacher Training</a>
+                    <a href="services.html">Leadership Development</a>
+                    <a href="services.html">School Advisory</a>
+                    <a href="services.html">CPD Programmes</a>
+                </div>
+                <div class="footer-contact">
+                    <h5>Get in touch</h5>
+                    <p style="color: var(--footer-accent);">info@britedconsult.com</p>
+                    <p>Serving Africa, Middle East & Asia</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 British Education Consultants</p>
+                <p class="footer-credit">Made by <a href="https://captivart.art" target="_blank" rel="noopener">captivart.art</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('teacherApplicationForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const form = e.target;
+            const btn = form.querySelector('button');
+            const status = document.getElementById('submissionStatus');
+            
+            btn.disabled = true;
+            btn.textContent = 'Processing...';
+            status.style.display = 'block';
+            status.textContent = 'Preparing your application...';
+            status.style.color = 'var(--text-light)';
+
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+            
+            try {
+                const response = await fetch('/api/apply', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
+                    btn.textContent = 'Application Sent!';
+                    btn.style.background = '#10b981';
+                    status.textContent = 'Thank you! Your application has been received. We will be in touch soon.';
+                    status.style.color = '#059669';
+                    form.reset();
+                } else {
+                    throw new Error('Submission failed');
+                }
+            } catch (err) {
+                btn.disabled = false;
+                btn.textContent = 'Try Again';
+                status.textContent = 'Something went wrong. Please try again or email us directly.';
+                status.style.color = 'var(--red)';
+            }
+        });
+    </script>
+</body>
+</html>

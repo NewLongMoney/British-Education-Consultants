@@ -12,12 +12,13 @@
 :root {
     /* Colors - Deep navy and warm cream */
     --navy: #0a1628;
-    --navy-light: #1a2a44;
+    --navy-light: #1e293b;
     --cream: #f8f6f0;
     --cream-dark: #ebe8e0;
     --red: #c41230;
-    --red-light: #e8324a;
-    --gold: #c9a227;
+    --red-light: #a30f28;
+    --gold: #ca8a04; /* Keep for specific secondary accents if any */
+    --footer-accent: #fde047; /* Yellow-300 */
     --text: #2d3748;
     --text-light: #5a6577;
     --white: #ffffff;
@@ -258,6 +259,7 @@ body {
 .btn-outline:hover {
     background: var(--navy);
     color: var(--white);
+    border-color: var(--navy);
 }
 
 .btn-white {
@@ -266,7 +268,8 @@ body {
 }
 
 .btn-white:hover {
-    background: var(--cream);
+    background: var(--gold);
+    color: var(--navy);
     transform: translateY(-2px);
 }
 
@@ -1218,6 +1221,265 @@ body {
 }
 
 /* =====================================================
+   RESOURCES GRID
+   ===================================================== */
+.resources-grid {
+    display: grid;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-2xl);
+}
+
+@media (min-width: 768px) {
+    .resources-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.resource-card {
+    background: var(--white);
+    border: 1px solid var(--cream-dark);
+    padding: var(--space-xl);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.resource-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--navy);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.resource-card:hover {
+    box-shadow: 0 10px 40px rgba(10, 22, 40, 0.08);
+    transform: translateY(-4px);
+}
+
+.resource-card:hover::before {
+    transform: translateX(0);
+}
+
+.resource-card.featured {
+    border-color: var(--red);
+    background: linear-gradient(135deg, var(--white) 0%, var(--cream) 100%);
+}
+
+.resource-card.featured::before {
+    background: var(--red);
+    height: 6px;
+}
+
+.resource-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-md);
+    position: relative;
+}
+
+.resource-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+}
+
+.resource-icon svg {
+    width: 24px;
+    height: 24px;
+    stroke: var(--white);
+}
+
+.resource-badge {
+    background: var(--red);
+    color: var(--white);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 4px 12px;
+    border-radius: 0;
+}
+
+.resource-content h3 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--navy);
+    margin-bottom: var(--space-sm);
+}
+
+.resource-content p {
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: var(--space-md);
+}
+
+.resource-meta {
+    display: flex;
+    gap: var(--space-md);
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-bottom: var(--space-md);
+}
+
+.file-type {
+    background: var(--cream);
+    padding: 4px 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.file-size {
+    opacity: 0.7;
+}
+
+.resource-actions {
+    display: flex;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+}
+
+.resource-actions .btn {
+    font-size: 0.875rem;
+    padding: 0.75rem 1.5rem;
+}
+
+/* =====================================================
+   MANIFESTO SECTION
+   ===================================================== */
+.manifesto-section {
+    background: var(--cream);
+    padding: var(--space-2xl);
+    border-radius: 0;
+    margin-top: var(--space-2xl);
+    border: 1px solid var(--cream-dark);
+}
+
+.manifesto-content {
+    display: grid;
+    gap: var(--space-xl);
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .manifesto-content {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+.manifesto-text {
+    color: var(--text);
+    line-height: 1.8;
+}
+
+.manifesto-text p {
+    margin-bottom: var(--space-md);
+}
+
+.manifesto-text p:last-child {
+    margin-bottom: 0;
+}
+
+.manifesto-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+@media (min-width: 768px) {
+    .manifesto-actions {
+        align-items: flex-start;
+    }
+}
+
+/* =====================================================
+   CAPABILITY STATEMENT SECTION (HOMEPAGE)
+   ===================================================== */
+.capability-section {
+    background: var(--navy);
+    color: var(--white);
+    padding: var(--space-2xl) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.capability-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 40%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.02);
+    transform: rotate(-15deg);
+}
+
+.capability-content {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: var(--space-xl);
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .capability-content {
+        grid-template-columns: 1.5fr 1fr;
+    }
+}
+
+.capability-text h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: var(--space-md);
+}
+
+.capability-text p {
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.7;
+    margin-bottom: var(--space-lg);
+}
+
+.capability-download {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: var(--space-xl);
+    text-align: center;
+}
+
+.capability-download h3 {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--gold);
+    margin-bottom: var(--space-sm);
+}
+
+.capability-download p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin-bottom: var(--space-md);
+}
+
+.capability-download .btn {
+    width: 100%;
+    justify-content: center;
+}
+
+/* =====================================================
    RESPONSIVE
    ===================================================== */
 @media (max-width: 768px) {
@@ -1237,6 +1499,27 @@ body {
     
     .service-number {
         font-size: 1.75rem;
+    }
+
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .resource-actions {
+        flex-direction: column;
+    }
+
+    .resource-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .manifesto-content {
+        grid-template-columns: 1fr;
+    }
+
+    .capability-content {
+        grid-template-columns: 1fr;
     }
 }
 
