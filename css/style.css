@@ -850,6 +850,18 @@ body {
     transform: scale(1.1);
 }
 
+.video-item {
+    position: relative;
+}
+
+.video-item video {
+    transition: transform 0.5s ease;
+}
+
+.video-item:hover video {
+    transform: scale(1.05);
+}
+
 /* =====================================================
    CTA BLOCK
    ===================================================== */
