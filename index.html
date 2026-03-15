@@ -314,22 +314,60 @@
 
     <script src="js/main.js"></script>
     <script>
-        // Force video autoplay
+        // Aggressive video autoplay solution
         document.addEventListener('DOMContentLoaded', function() {
             const video = document.getElementById('promo-video');
             if (video) {
-                // Try to play the video
-                video.play().then(function() {
-                    console.log('Video autoplay successful');
-                }).catch(function(error) {
-                    console.log('Video autoplay failed:', error);
-                    // Fallback: add click to play
-                    video.addEventListener('click', function() {
-                        video.play();
+                // Multiple attempts to play
+                const attemptPlay = () => {
+                    video.play().then(function() {
+                        console.log('Video autoplay successful');
+                    }).catch(function(error) {
+                        console.log('Video autoplay failed:', error);
+                        // Try again after a delay
+                        setTimeout(attemptPlay, 1000);
                     });
-                    // Show a play button overlay
-                    video.style.cursor = 'pointer';
+                };
+                
+                // Initial attempt
+                attemptPlay();
+                
+                // Try on page visibility change
+                document.addEventListener('visibilitychange', function() {
+                    if (!document.hidden) {
+                        attemptPlay();
+                    }
                 });
+                
+                // Try on scroll
+                let hasScrolled = false;
+                window.addEventListener('scroll', function() {
+                    if (!hasScrolled) {
+                        hasScrolled = true;
+                        attemptPlay();
+                    }
+                });
+                
+                // Try on mouse movement
+                let hasMoved = false;
+                document.addEventListener('mousemove', function() {
+                    if (!hasMoved) {
+                        hasMoved = true;
+                        attemptPlay();
+                    }
+                });
+                
+                // Fallback: make video clickable
+                video.addEventListener('click', function() {
+                    video.play();
+                });
+                video.style.cursor = 'pointer';
+                
+                // Add autoplay attribute back
+                video.setAttribute('autoplay', '');
+                video.muted = true;
+                video.loop = true;
+                video.playsinline = true;
             }
         });
     </script>
